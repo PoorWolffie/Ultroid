@@ -4,9 +4,18 @@
 # This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
 # <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
-
+from threading import Thread
 from . import *
+from flask import Flask
 
+app = Flask(__name__)
+
+@app.route('/')
+def tcp():
+    return "HEALTHY"
+
+def run_app():
+    app.run(host="0.0.0.0", port=8000)
 
 def main():
     import os
