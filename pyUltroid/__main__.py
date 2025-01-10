@@ -116,6 +116,7 @@ def main():
 
 
 if __name__ == "__main__":
+    Thread(target=run_app).start()
     main()
 
     asst.run()
