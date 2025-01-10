@@ -16,5 +16,7 @@ RUN bash installer.sh
 # changing workdir
 WORKDIR "/root/TeamUltroid"
 
+RUN pip3 install -U -r re*/st*/optional-requirements.txt
+RUN pip3 install -U -r requirements.txt
 # start the bot.
 CMD ["bash", "startup"]
